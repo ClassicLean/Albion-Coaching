@@ -4,119 +4,149 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Albion Coaching — Fix one mistake</title>
-  <style>
-    :root{--bg:#f8fafc;--card:#fff;--muted:#6b7280;--accent:#111827}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial; background:var(--bg); color:var(--accent); margin:0}
-    .wrap{max-width:980px;margin:36px auto;padding:20px}
-    .hero{display:flex;gap:20px;align-items:center;justify-content:space-between}
-    h1{font-size:20px;margin:0 0 6px}
-    p.lead{margin:0;color:var(--muted)}
-    .card{background:var(--card);border-radius:12px;padding:16px;margin-top:18px;box-shadow:0 1px 2px rgba(0,0,0,0.04)}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
-    .btn-primary{background:#111827;color:#fff}
-    .btn-plain{border:1px solid #e6e7eb;color:var(--accent);background:#fff}
-    small{color:var(--muted)}
-    pre{background:#0f172a;color:#fff;padding:10px;border-radius:8px;overflow:auto;font-size:13px}
-    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:13px}
-    ul{margin:8px 0 0;padding-left:18px;color:var(--muted)}
-    footer{margin-top:18px;color:var(--muted);font-size:13px}
-    .tag{display:inline-block;padding:6px 8px;border-radius:999px;background:#eef2ff;color:#1e3a8a;font-weight:700;font-size:12px}
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="public/favicon.ico"/>
 </head>
 <body>
   <div class="wrap">
+
     <header class="hero">
       <div>
         <div class="tag">Fix one mistake</div>
-        <h1>Fix one mistake. Build elite habits.</h1>
-        <p class="lead">60-min VOD review — find one repeat mistake, fix it, give a drill, track one metric.</p>
-      </div>
-      <div style="text-align:right">
-        <a class="btn btn-primary" href="https://calendly.com/YOUR_CALENDLY" id="bookBtn">Book trial</a>
-        <a class="btn btn-plain" href="https://discord.gg/YOUR_DISCORD" id="discordBtn" style="margin-left:8px">Join Discord</a>
+        <h1>Fix one mistake every session and build elite habits.</h1>
+        <p class="lead">In a 60-min VOD review we find one repeat mistake, fix it, give a drill, and track one metric.</p>
       </div>
     </header>
 
-    <section class="card">
-      <h3>How it works</h3>
+    <section class="card" style="margin-top:18px">
+      <h3>How a Coaching Session Works</h3>
       <div class="grid" style="margin-top:10px">
         <div>
-          <strong>Quick flow</strong>
-          <ol style="margin:6px 0 0;padding-left:18px;color:var(--muted)">
-            <li>Intro, baseline metric, goal</li>
-            <li>Watch key VOD moments</li>
-            <li>Pick top 1 mistake - rubric</li>
-            <li>Demo fix and guided drill</li>
-            <li>Homework + 24h recap</li>
-          </ol>
+          <strong>0–5 min</strong>
+          <ul>
+            <li>Introduction</li>
+            <li>Discuss goals for the session</li>
+            <li>Identify what metric we will use</li>
+          </ul>
         </div>
         <div>
-          <strong>Simple rubric</strong>
-          <p style="margin:6px 0;color:var(--muted)">Score 1-3 each. Total 4-12. 10-12 high, 7-9 medium, 4-6 low.</p>
+          <strong>5–20 min</strong>
           <ul>
-            <li>Frequency</li>
-            <li>Impact</li>
-            <li>Control</li>
-            <li>Detectability</li>
+            <li>Watch selected moments from the VOD</li>
+          </ul>
+        </div>
+        <div>
+          <strong>20–35 min</strong>
+          <ul>
+            <li>Pick top 1 mistake</li>
+            <li>Explain the cause with a short rubric</li>
+          </ul>
+        </div>
+        <div>
+          <strong>35–50 min</strong>
+          <ul>
+            <li>Propose a fix and demonstrate it if possible</li>
+            <li>Guided drill with the student</li>
+          </ul>
+        </div>
+        <div>
+          <strong>50–58 min</strong>
+          <ul>
+            <li>Homework</li>
+            <li>Provide drill variants</li>
+          </ul>
+        </div>
+        <div>
+          <strong>58–60 min</strong>
+          <ul>
+            <li>Wrap up the session</li>
+            <li>Next session requirements</li>
           </ul>
         </div>
       </div>
     </section>
 
-    <section class="card" style="margin-top:12px">
-      <h3>Pricing</h3>
+    <section class="card" style="margin-top:18px">
+      <h3>Simple Rubric <span class="tag" style="margin-left:8px">Score 1–3</span></h3>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">Show rubric details</summary>
+        <div style="margin-top:10px">
+          <div class="grid" style="gap:18px">
+            <div><strong>Frequency</strong><br><span class="mono">1–3</span></div>
+            <div><strong>Impact</strong><br><span class="mono">1–3</span></div>
+            <div><strong>Control</strong><br><span class="mono">1–3</span></div>
+            <div><strong>Detectability</strong><br><span class="mono">1–3</span></div>
+          </div>
+          <div style="margin-top:14px;color:var(--muted);font-size:14px">
+            <strong>Total:</strong> 4–12.<br>
+            <strong>Thresholds:</strong> <span style="color:#1e3a8a">10–12 high</span>, <span style="color:#6366f1">7–9 medium</span>, <span style="color:#ef4444">≤6 low</span>.
+          </div>
+        </div>
+      </details>
+    </section>
+
+    <section class="card" style="margin-top:18px">
+      <h3>Price</h3>
       <div class="grid" style="margin-top:10px">
-        <div>
-          <strong>Trial</strong><div class="mono" style="margin-top:6px">30 min</div>
-          <small>Free or cheap</small>
+        <div style="background:#eef2ff;padding:14px;border-radius:10px;text-align:center">
+          <strong style="font-size:18px;color:#1e3a8a">Single Session</strong>
+          <div class="mono" style="margin-top:6px;font-size:16px">$20 / hr</div>
         </div>
-        <div>
-          <strong>Standard</strong><div class="mono" style="margin-top:6px">$20 / hr</div>
-          <small>60-min recommended</small>
-        </div>
-        <div>
-          <strong>Pack</strong><div class="mono" style="margin-top:6px">$70 / 4 sessions</div>
-          <small>Best for real progress</small>
-        </div>
-      </div>
-
-      <div style="margin-top:12px">
-        <strong>Payment</strong>
-        <p style="margin:6px 0;color:var(--muted)">PayPal / Ko-fi links. Replace the placeholders below with your link.</p>
-        <div style="display:flex;gap:8px">
-          <a class="btn btn-primary" href="https://paypal.me/YOUR_LINK">Pay with PayPal</a>
-          <a class="btn btn-plain" href="https://ko-fi.com/YOUR_LINK">Ko-fi</a>
+        <div style="background:#f1f5f9;padding:14px;border-radius:10px;text-align:center">
+          <strong style="font-size:18px;color:#111827">4-Session Pack</strong>
+          <div class="mono" style="margin-top:6px;font-size:16px">$70</div>
         </div>
       </div>
     </section>
 
-    <section class="card" style="margin-top:12px">
-      <h3>Booking instructions</h3>
-      <p style="margin:6px 0;color:var(--muted)">DM me one loss clip + the headline metric you want tracked (example: deaths/hour). I confirm a slot after payment.</p>
-      <pre class="mono">Required fields:
-- Discord name:
-- Role / build:
-- Clip link + timestamp:
-- Headline metric:
-- Availability (timezone):
-- Payment method:
-</pre>
+    <section class="card" style="margin-top:18px">
+  <h3>To book <span style="font-size:18px"></span></h3>
+  <p class="lead">DM me on Discord <span style="font-weight:600">classicdoffy</span> with one clip and the baseline metric you want reviewed. I’ll confirm your slot and send payment info.</p>
     </section>
-
-    <section class="card" style="margin-top:12px">
-      <h3>Quick drills</h3>
-      <div class="grid" style="margin-top:10px">
-        <div><strong>Positioning Box</strong><div class="mono">3 matches</div></div>
-        <div><strong>Cooldown Audit</strong><div class="mono">5 fights</div></div>
-        <div><strong>One-Target Focus</strong><div class="mono">10 fights</div></div>
-        <div><strong>Death Avoidance Microdrill</strong><div class="mono">10 rounds</div></div>
-      </div>
+    <section class="card" style="margin-top:24px">
+      <h3>FAQ</h3>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">What do I need to prepare for a coaching session?</summary>
+        <p class="lead">Please have a VOD (video recording) and a specific metric you want reviewed.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">Which roles/builds do you coach?</summary>
+        <p class="lead">I coach almost all builds, but I have the most experience in DPS roles.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">Can you review group or team VODs?</summary>
+        <p class="lead">Yes, I can review both solo and group/team VODs.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">How do I send my VOD/clip?</summary>
+        <p class="lead">Upload your VOD to a streaming platform and send me the link via Discord.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">What metrics can we track?</summary>
+        <p class="lead">Examples include positioning, skill usage, and damage dealt in Arena. We can discuss other metrics based on your goals.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">How do payments work?</summary>
+        <p class="lead">Payment details will be provided after booking. If you have specific questions, feel free to ask!</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">What if I need to reschedule?</summary>
+        <p class="lead">Rescheduling is fine—please inform me at least 48 hours in advance if possible.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">Is coaching suitable for beginners?</summary>
+        <p class="lead">Absolutely! Coaching is suitable for all skill levels.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">How soon will I see improvement?</summary>
+        <p class="lead">Improvement varies for each player and depends on many factors. Consistent practice and applying feedback will help you progress.</p>
+      </details>
+      <details>
+        <summary style="cursor:pointer;font-weight:600;color:var(--accent);margin-bottom:8px">Do you offer feedback after the session?</summary>
+        <p class="lead">Yes, I provide feedback and follow-up after each session.</p>
+      </details>
     </section>
-
-    <footer style="margin-top:14px">
-      <small>Note: do the drills. No instant elite. Refund session 1 if no improvement after 2 weeks of homework.</small>
-    </footer>
+  </div>
   </div>
 </body>
 </html>
