@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>About Me — Albion Coaching</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="public/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+  <link rel="manifest" href="public/site.webmanifest">
+  <link rel="android-chrome-192x192" href="public/android-chrome-192x192.png">
+  <link rel="android-chrome-512x512" href="public/android-chrome-512x512.png">
 </head>
 <body>
   <header class="nav">
@@ -19,16 +24,16 @@
       <a href="services.html#pricing" class="btn btn-ghost">Book a Session</a>
     </nav>
   </header>
-  <div class="wrap">
-    <header class="hero">
-      <div>
-        <div class="tag">About Me</div>
-        <h1>ClassicDoffy</h1>
-        <p class="lead">Helping players master instanced PvP with proven experience</p>
-      </div>
-    </header>
+  <section class="hero">
+    <div>
+      <div class="tag">About Me</div>
+      <h1>ClassicDoffy</h1>
+      <p class="lead">Helping players master instanced PvP with proven experience</p>
+    </div>
+  </section>
 
-    <main>
+  <main>
+      <img src="public/images/2.jpg" alt="Albion Online Action Shot" class="page-image">
       <section class="card section-spacing">
         <h3>My Albion Online Story</h3>
         <p class="lead">
@@ -52,7 +57,7 @@
       <section class="card section-spacing">
         <h3>Accomplishments & Experience</h3>
         <div class="accomplishments-grid">
-          <div>
+          <div class="accomplishment-item">
             <h4>Hellgate Infamy</h4>
             <p class="lead">
               <ul>
@@ -61,7 +66,7 @@
               </ul>
             </p>
           </div>
-          <div>
+          <div class="accomplishment-item">
             <h4>Championships</h4>
             <p class="lead">
               <ul>
@@ -69,7 +74,7 @@
               </ul>
             </p>
           </div>
-          <div>
+          <div class="accomplishment-item">
             <h4>Guild Affiliations</h4>
             <p class="lead">
               Hired by top guilds to farm season points, including:
@@ -104,6 +109,7 @@
       </div>
       <p>© 2025 Albion Coaching</p>
     </footer>
-  </div>
+  <button id="backToTopBtn" title="Go to top">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>

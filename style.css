@@ -17,7 +17,7 @@ body {
 }
 
 /* Layout */
-.wrap {
+main {
   max-width: 980px;
   margin: 36px auto;
   padding: 20px;
@@ -29,10 +29,51 @@ body {
   gap: 12px;
 }
 
+.accomplishments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 16px;
+}
+
+.accomplishment-item {
+    background: var(--bg); /* Slightly darker background for the item */
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--muted); /* Subtle border */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+}
+
+.accomplishments-grid h4 {
+    margin-top: 0;
+    font-size: 1.3em; /* Increased font size */
+    color: var(--text); /* Changed color for better readability */
+    margin-bottom: 10px;
+}
+
+.accomplishments-grid ul {
+    /* list-style: none; */ /* Removed to re-enable bullet points */
+    padding-left: 20px; /* Added padding for indentation and bullet points */
+    margin: 0;
+}
+
+.accomplishments-grid li {
+    margin-bottom: 8px;
+}
+
 
 
 .coaching-grid {
     margin-top: 10px;
+}
+
+.coaching-grid strong {
+    display: block;
+    padding: 8px 12px;
+    border: 1px solid var(--accent);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(0, 123, 255, 0.1);
 }
 
 .tag-margin-left {
@@ -139,12 +180,46 @@ details p {
   background: #3a3a3a;
 }
 
+.nav.scrolled-nav {
+    background-color: rgba(42, 42, 42, 0.9); /* Slightly transparent background */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    padding: 10px 20px; /* Reduce padding to make it "shrink" */
+}
+
 .hero {
+  position: relative; /* Needed for absolute positioning of children */
   text-align: center;
-  padding: 4rem 1rem;
+  padding: 1rem 1rem;
+  color: var(--text); /* Ensure text is readable on dark background */
+  overflow: hidden; /* Hide overflow from background image */
+}
+
+.hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('public/images/1.jpg'); /* Placeholder image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2; /* Place behind content and overlay */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+    z-index: -1; /* Place behind content, above background image */
 }
 
 .hero-content {
+    position: relative; /* Ensure content is above overlay */
+    z-index: 1;
     flex: 1;
 }
 
@@ -166,6 +241,16 @@ details p {
   padding: 24px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
   margin-bottom: 48px;
+}
+
+.section-spacing {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-spacing-lg {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 .btn {
@@ -217,6 +302,129 @@ details p {
     margin: 2rem auto 0;
 }
 
+/* Video Thumbnail Styles */
+.video-thumbnail {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.video-thumbnail:hover img {
+    transform: scale(1.05);
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: rgba(255, 0, 0, 0.8); /* YouTube red */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+    pointer-events: none; /* Allow clicks to pass through to the thumbnail */
+    transition: background-color 0.3s ease;
+}
+
+.play-button::before {
+    content: '▶';
+    margin-left: 5px; /* Adjust for triangle shape */
+}
+
+.video-thumbnail:hover .play-button {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/* Lightbox Styles */
+#lightbox-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark semi-transparent background */
+    z-index: 1000; /* Ensure it's on top of everything */
+    
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start with opacity 0 for fade-in */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+#lightbox-overlay.is-open {
+    display: flex; /* Show the lightbox when 'is-open' class is present */
+    opacity: 1; /* Ensure it's fully visible */
+}
+
+#lightbox-content {
+    position: relative;
+    background-color: var(--card);
+    padding: 40px 20px 20px 20px; /* Increased top padding to make space for the button */
+    border-radius: 8px;
+    max-width: 95%; /* Increased max-width */
+    max-height: 95vh; /* Increased max-height */
+    width: 900px; /* Increased default width */
+    height: auto; /* Allow height to adjust based on content */
+    flex-shrink: 0; /* Prevent content from shrinking in flex container */
+    display: flex; /* Ensure content is also a flex container */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 32px; /* Increased font size */
+    font-weight: bold; /* Added bold font weight */
+    line-height: 1; /* Ensure good vertical alignment */
+    color: var(--text); /* Changed default color to white */
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's above other lightbox content */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#lightbox-close:hover {
+    color: var(--accent); /* Change color to accent on hover */
+}
+
+#lightbox-video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden; /* Ensure no overflow from iframe */
+    background-color: black; /* Add a black background to see the container */
+    margin-top: 10px; /* Add some space below the close button area */
+}
+
+#lightbox-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block; /* Ensure iframe is a block element */
+}
+
 .how-it-works .steps {
     display: flex;
     justify-content: space-between;
@@ -238,6 +446,15 @@ details p {
     color: var(--text);
     font-weight: 700;
     margin: 0 auto 1rem;
+}
+
+.page-image {
+    display: block; /* Ensures it takes up its own line */
+    max-width: 100%; /* Makes image responsive */
+    height: auto; /* Maintains aspect ratio */
+    margin: 1rem auto 0.5rem auto; /* Centers the image and adds vertical spacing */
+    border-radius: 8px; /* Softens edges */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
 }
 
 /* Pricing Section */
@@ -317,4 +534,28 @@ footer {
     .how-it-works .steps {
         flex-direction: column;
     }
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: var(--accent); /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+    transition: background-color 0.3s, opacity 0.3s; /* Smooth transition */
+    opacity: 0.7; /* Slightly transparent */
+}
+
+#backToTopBtn:hover {
+    background-color: #555; /* Darker background on hover */
+    opacity: 1; /* Fully opaque on hover */
 }

@@ -5,91 +5,116 @@
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <title>Albion Coaching — Fix One Mistake</title>
   <link rel="stylesheet" href="style.css"/>
-  <link rel="icon" href="public/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16x16.png">
+  <link rel="manifest" href="public/site.webmanifest">
+  <link rel="android-chrome-192x192" href="public/android-chrome-192x192.png">
+  <link rel="android-chrome-512x512" href="public/android-chrome-512x512.png">
 </head>
 <body>
-  <div class="wrap">
-    <header class="nav">
-      <div>
-        <strong>Albion Coaching</strong>
-      </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
-        <a href="services.html#pricing" class="btn btn-ghost">Book a Session</a>
-      </nav>
-    </header>
+  <header class="nav">
+    <div>
+      <strong>Albion Coaching</strong>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="services.html#pricing" class="btn btn-ghost">Book a Session</a>
+    </nav>
+  </header>
+  <main>
+      <section class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+          <h1>I help Albion Online players fix their one biggest mistake and build elite habits.</h1>
+          <p class="lead">Stop guessing. Start improving. Get a personalized VOD review that gives you a clear path to progress.</p>
 
-    <section class="hero">
-      <div class="hero-content">
-        <h1>We help Albion Online players fix their one biggest mistake and build elite habits.</h1>
-        <p class="lead">Stop guessing. Start improving. Get a personalized VOD review that gives you a clear path to progress.</p>
+        </div>
+      </section>
 
-      </div>
-    </section>
-
-        <section class="see-me-in-action card">
-      <h3>See Me in Action: High-Level Gameplay</h3>
-      <div class="videos">
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/DJflGY5mXfE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>20v20 Crystal League</p>
-        </div>
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/gyEbFCvx0Ro" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>10v10 Hellgates</p>
-        </div>
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/JnYiujwdZaY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>5v5 Hellgates</p>
-        </div>
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/5Z8c3A3nLLk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-          <p>Solo PVP</p>
-        </div>
-      </div>
-      <a href="https://www.youtube.com/@ClassicDoffy" class="btn btn-primary" target="_blank">More on YouTube</a>
-    </section>
-
-    <section class="how-it-works card">
-      <h3>How It Works</h3>
-      <div class="steps">
-        <div class="step">
-          <span>1</span>
-          <p><strong>Send Your VOD:</strong> Share a clip of a recent loss.</p>
-        </div>
-        <div class="step">
-          <span>2</span>
-          <p><strong>Get Your Analysis:</strong> We'll find your single biggest mistake.</p>
-        </div>
-        <div class="step">
-          <span>3</span>
-          <p><strong>Receive Your Drill:</strong> Get a custom drill and one key metric to track.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="pricing" class="card">
-        <h3>Price</h3>
-        <div class="grid pricing-grid">
-          <div class="pricing-box pricing-box-single">
-            <strong class="pricing-title">Single Session</strong>
-            <div class="mono pricing-price">$20 / hr</div>
+          <section class="see-me-in-action card">
+        <h3>See Me in Action</h3>
+        <div class="videos">
+          <div class="video">
+            <div class="video-thumbnail" data-video-id="DJflGY5mXfE">
+              <img src="https://img.youtube.com/vi/DJflGY5mXfE/hqdefault.jpg" alt="20v20 Crystal League Thumbnail">
+              <div class="play-button"></div>
+            </div>
+            <p>20v20 Crystal League</p>
           </div>
-          <div class="pricing-box pricing-box-pack">
-            <strong class="pricing-title">4-Session Pack</strong>
-            <div class="mono pricing-price">$70</div>
+          <div class="video">
+            <div class="video-thumbnail" data-video-id="gyEbFCvx0Ro">
+              <img src="https://img.youtube.com/vi/gyEbFCvx0Ro/hqdefault.jpg" alt="10v10 Hellgates Thumbnail">
+              <div class="play-button"></div>
+            </div>
+            <p>10v10 Hellgates</p>
+          </div>
+          <div class="video">
+            <div class="video-thumbnail" data-video-id="JnYiujwdZaY">
+              <img src="https://img.youtube.com/vi/JnYiujwdZaY/hqdefault.jpg" alt="5v5 Hellgates Thumbnail">
+              <div class="play-button"></div>
+            </div>
+            <p>5v5 Hellgates</p>
+          </div>
+          <div class="video">
+            <div class="video-thumbnail" data-video-id="5Z8c3A3nLLk">
+              <img src="https://img.youtube.com/vi/5Z8c3A3nLLk/hqdefault.jpg" alt="Solo PVP Thumbnail">
+              <div class="play-button"></div>
+            </div>
+            <p>Solo PVP</p>
           </div>
         </div>
-    </section>
+        <a href="https://www.youtube.com/@ClassicDoffy" class="btn btn-primary" target="_blank">More on YouTube</a>
+      </section>
 
-    <section id="book" class="card">
-      <h3>Ready to Improve?</h3>
-      <p class="lead">Book your trial session now. Send me a clip of a loss, and let's find the one mistake that's holding you back.</p>
-      <a class="btn btn-primary" href="services.html#pricing">Book a Session</a>
-    </section>
+      <div id="lightbox-overlay">
+        <div id="lightbox-content">
+          <span id="lightbox-close">&times;</span>
+          <div id="lightbox-video-container"></div>
+        </div>
+      </div>
 
+      <section class="how-it-works card">
+        <h3>How It Works</h3>
+        <div class="steps">
+          <div class="step">
+            <span>1</span>
+            <p><strong>Send Your VOD:</strong> Share a clip of a recent loss.</p>
+          </div>
+          <div class="step">
+            <span>2</span>
+            <p><strong>Get Your Analysis:</strong> We'll find your single biggest mistake.</p>
+          </div>
+          <div class="step">
+            <span>3</span>
+            <p><strong>Receive Your Drill:</strong> Get a custom drill and one key metric to track.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="pricing" class="card">
+          <h3>Price</h3>
+          <div class="grid pricing-grid">
+            <div class="pricing-box pricing-box-single">
+              <strong class="pricing-title">Single Session</strong>
+              <div class="mono pricing-price">$20 / hr</div>
+            </div>
+            <div class="pricing-box pricing-box-pack">
+              <strong class="pricing-title">4-Session Pack</strong>
+              <div class="mono pricing-price">$70</div>
+            </div>
+          </div>
+      </section>
+
+      <section id="book" class="card">
+        <h3>Ready to Improve?</h3>
+        <p class="lead">Book your session now. Send me a clip of a loss, and let's find the one mistake that's holding you back.</p>
+        <a class="btn btn-primary" href="services.html#pricing">Book a Session</a>
+      </section>
+    </main>
     <footer>
       <div class="footer-nav">
         <a href="index.html">Home</a>
@@ -101,6 +126,7 @@
       </div>
       <p>© 2025 Albion Coaching</p>
     </footer>
-  </div>
+  <button id="backToTopBtn" title="Go to top">↑</button>
+  <script src="script.js"></script>
 </body>
 </html>
