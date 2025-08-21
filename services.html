@@ -15,28 +15,42 @@
 </head>
 <body>
   <header class="nav">
-    <div>
-      <strong>Albion Coaching</strong>
+    <div class="nav__logo">
+      <a href="index.html"><strong>Albion Coaching</strong></a>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="#pricing" class="btn btn-ghost">Book a Session</a>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav__menu">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="services.html" class="nav__link">Services</a>
+      <a href="#services-pricing" class="nav__link btn btn-ghost">Book a Session</a>
     </nav>
   </header>
 
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="mobile-nav__link">Home</a>
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="services.html" class="mobile-nav__link">Services</a>
+    <a href="#services-pricing" class="mobile-nav__link btn btn-ghost">Book a Session</a>
+  </nav>
+
   <section class="hero">
-    <div class="hero-content">
+    <div class="hero__background hero__background--services"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__animated-overlay"></div>
+    <div class="hero__content">
       <div class="tag">Fix one mistake</div>
-      <h1>Fix one mistake every session and build elite habits.</h1>
-      <p class="lead">In a 60-min VOD review we find one repeat mistake, fix it, give a drill, and track one metric.</p>
+      <h1 class="hero__title">Fix one mistake every session and build elite habits.</h1>
+      <p class="hero__subtitle">In a 60-min VOD review we find one repeat mistake, fix it, give a drill, and track one metric.</p>
     </div>
   </section>
 
   <main>
-      <img src="public/images/3.jpg" alt="Albion Online Coaching Session" class="page-image">
-      <section class="card section-spacing">
+            <section class="card">
         <h3>How a Coaching Session Works</h3>
         <div class="grid coaching-grid">
           <div>
@@ -84,7 +98,7 @@
         </div>
       </section>
 
-      <section class="card section-spacing">
+      <section class="card">
         <h3>Simple Rubric <span class="tag tag-margin-left">Score 1–3</span></h3>
         <details>
           <summary class="faq-summary">Show rubric details</summary>
@@ -103,7 +117,7 @@
         </details>
       </section>
 
-      <section id="pricing" class="card section-spacing">
+      <section id="services-pricing" class="card card--pricing">
         <h3>Price</h3>
         <div class="grid pricing-grid">
           <div class="pricing-box pricing-box-single">
@@ -117,11 +131,11 @@
         </div>
       </section>
 
-      <section class="card section-spacing">
+      <section class="card">
     <h3>To book </h3>
     <p class="lead">DM me on Discord <span class="discord-id discord-id-prominent">(ID: classicdoffy)</span> with one clip and the baseline metric you want reviewed. I’ll confirm your slot and send payment info.</p>
       </section>
-      <section class="card section-spacing-lg">
+      <section class="card">
         <h3>FAQ</h3>
         <details>
           <summary class="faq-summary">What do I need to prepare for a coaching session?</summary>
@@ -166,17 +180,17 @@
       </section>
     </main>
     <footer>
-      <div class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+      <div class="footer__nav">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="about.html" class="footer__link">About</a>
+        <a href="services.html" class="footer__link">Services</a>
       </div>
-      <div class="social-links">
-        <a href="https://www.youtube.com/@ClassicDoffy" target="_blank">YouTube</a>
+      <div class="footer__social">
+        <a href="https://www.youtube.com/@ClassicDoffy" class="footer__social-link" target="_blank">YouTube</a>
       </div>
       <p>© 2025 Albion Coaching</p>
     </footer>
-  <button id="backToTopBtn" title="Go to top">↑</button>
-  <script src="script.js"></script>
+  <button id="backToTopBtn-services" title="Go to top">↑</button>
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>

@@ -14,55 +14,68 @@
 </head>
 <body>
   <header class="nav">
-    <div>
-      <strong>Albion Coaching</strong>
+    <div class="nav__logo">
+      <a href="index.html"><strong>Albion Coaching</strong></a>
     </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="services.html#pricing" class="btn btn-ghost">Book a Session</a>
+    <div class="hamburger-menu" id="hamburger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="nav__menu">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="services.html" class="nav__link">Services</a>
+      <a href="services.html#services-pricing" class="nav__link btn btn-ghost">Book a Session</a>
     </nav>
   </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="index.html" class="mobile-nav__link">Home</a>
+    <a href="about.html" class="mobile-nav__link">About</a>
+    <a href="services.html" class="mobile-nav__link">Services</a>
+    <a href="services.html#services-pricing" class="mobile-nav__link btn btn-ghost">Book a Session</a>
+  </nav>
+  <section class="hero">
+    <div class="hero__background hero__background--index"></div>
+    <div class="hero__overlay"></div>
+    <div class="hero__animated-overlay"></div>
+    <div class="hero__content">
+      <h1 class="hero__title">I help Albion Online players fix their one biggest mistake and build elite habits.</h1>
+      <p class="hero__subtitle">Stop guessing. Start improving. Get a personalized VOD review that gives you a clear path to progress.</p>
+
+    </div>
+  </section>
   <main>
-      <section class="hero">
-        <div class="hero-background"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <h1>I help Albion Online players fix their one biggest mistake and build elite habits.</h1>
-          <p class="lead">Stop guessing. Start improving. Get a personalized VOD review that gives you a clear path to progress.</p>
 
-        </div>
-      </section>
-
-          <section class="see-me-in-action card">
+          <section class="card card--see-me-in-action">
         <h3>See Me in Action</h3>
         <div class="videos">
           <div class="video">
             <div class="video-thumbnail" data-video-id="DJflGY5mXfE">
-              <img src="https://img.youtube.com/vi/DJflGY5mXfE/hqdefault.jpg" alt="20v20 Crystal League Thumbnail">
-              <div class="play-button"></div>
+              <img class="video-thumbnail__image" src="https://img.youtube.com/vi/DJflGY5mXfE/hqdefault.jpg" alt="20v20 Crystal League Thumbnail">
+              <div class="video-thumbnail__play-button"></div>
             </div>
             <p>20v20 Crystal League</p>
           </div>
           <div class="video">
             <div class="video-thumbnail" data-video-id="gyEbFCvx0Ro">
-              <img src="https://img.youtube.com/vi/gyEbFCvx0Ro/hqdefault.jpg" alt="10v10 Hellgates Thumbnail">
-              <div class="play-button"></div>
+              <img class="video-thumbnail__image" src="https://img.youtube.com/vi/gyEbFCvx0Ro/hqdefault.jpg" alt="10v10 Hellgates Thumbnail">
+              <div class="video-thumbnail__play-button"></div>
             </div>
             <p>10v10 Hellgates</p>
           </div>
           <div class="video">
             <div class="video-thumbnail" data-video-id="JnYiujwdZaY">
-              <img src="https://img.youtube.com/vi/JnYiujwdZaY/hqdefault.jpg" alt="5v5 Hellgates Thumbnail">
-              <div class="play-button"></div>
+              <img class="video-thumbnail__image" src="https://img.youtube.com/vi/JnYiujwdZaY/hqdefault.jpg" alt="5v5 Hellgates Thumbnail">
+              <div class="video-thumbnail__play-button"></div>
             </div>
             <p>5v5 Hellgates</p>
           </div>
           <div class="video">
             <div class="video-thumbnail" data-video-id="5Z8c3A3nLLk">
-              <img src="https://img.youtube.com/vi/5Z8c3A3nLLk/hqdefault.jpg" alt="Solo PVP Thumbnail">
-              <div class="play-button"></div>
+              <img class="video-thumbnail__image" src="https://img.youtube.com/vi/5Z8c3A3nLLk/hqdefault.jpg" alt="Solo PVP Thumbnail">
+              <div class="video-thumbnail__play-button"></div>
             </div>
             <p>Solo PVP</p>
           </div>
@@ -70,8 +83,9 @@
         <a href="https://www.youtube.com/@ClassicDoffy" class="btn btn-primary" target="_blank">More on YouTube</a>
       </section>
 
-      <div id="lightbox-overlay">
+      <div id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-heading" aria-hidden="true">
         <div id="lightbox-content">
+          <h2 id="lightbox-heading" class="sr-only">Video Lightbox</h2>
           <span id="lightbox-close">&times;</span>
           <div id="lightbox-video-container"></div>
         </div>
@@ -107,26 +121,26 @@
               <div class="mono pricing-price">$70</div>
             </div>
           </div>
-      </section>
+      </section>      
 
-      <section id="book" class="card">
+      <section id="index-book" class="card card--book">
         <h3>Ready to Improve?</h3>
         <p class="lead">Book your session now. Send me a clip of a loss, and let's find the one mistake that's holding you back.</p>
-        <a class="btn btn-primary" href="services.html#pricing">Book a Session</a>
+        <a class="btn btn-primary" href="services.html#services-pricing">Book a Session</a>
       </section>
     </main>
     <footer>
-      <div class="footer-nav">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="services.html">Services</a>
+      <div class="footer__nav">
+        <a href="index.html" class="footer__link">Home</a>
+        <a href="about.html" class="footer__link">About</a>
+        <a href="services.html" class="footer__link">Services</a>
       </div>
-      <div class="social-links">
-        <a href="https://www.youtube.com/@ClassicDoffy" target="_blank">YouTube</a>
+      <div class="footer__social">
+        <a href="https://www.youtube.com/@ClassicDoffy" class="footer__social-link" target="_blank">YouTube</a>
       </div>
       <p>© 2025 Albion Coaching</p>
     </footer>
-  <button id="backToTopBtn" title="Go to top">↑</button>
-  <script src="script.js"></script>
+  <button id="backToTopBtn-index" title="Go to top">↑</button>
+  <script src="js/script.js" type="module"></script>
 </body>
 </html>
